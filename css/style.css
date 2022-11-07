@@ -1,0 +1,48 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+    max-width: 1000px;
+    padding: 0 20px;
+}
+
+.header {
+    color: teal;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px 0px #759AEA;
+    border: 2px solid teal;
+    border-radius: 20px;
+}
+
+.resume {
+    color: teal;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.resume__finalResult {
+    color: hsl(180, 100%, 15%);
+    font-weight: 700;
+}
+
+.footer {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: teal;
+    background-color: aliceblue;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 0px #759AEA;
+    border: 2px solid teal;
+}

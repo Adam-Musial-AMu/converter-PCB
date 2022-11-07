@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <title>Converter</title>
+</head>
+
+<body class="body">
+    <h1 class="header">Formularz kalkulacyjny do wyceny <br> elektronicznych obwodów drukowanych PCB</h1>
+    <div class="container">
+        <form class="form js-form">
+            <p class="form__paragraph">
+                Wszystkie pola są wymagane *.
+            </p>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Rozmiar płytki PCB oraz ilość
+                </legend>
+                <p class="form__paragraph">
+                    <label class="form__label">
+                        <span class="form__labelText">
+                            Długość PCB*
+                        </span>
+                        <input class="form__field js-length" name="lengthPcb" type="number" min="1" max="300"
+                            value="100" required>
+                        <span class="form__unit">
+                            mm
+                        </span>
+                    </label>
+                </p>
+                <p class="form__paragraph">
+                    <label class="form__label">
+                        <span class="form__labelText">
+                            Szerokość PCB*
+                        </span>
+                        <input class="form__field js-width" name="widthPcb" type="number" min=1 max="300"
+                            value="50" required>
+                        <span class="form__unit">
+                            mm
+                        </span>
+                    </label>
+                </p>
+                <p class="form__paragraph">
+                    <label class="form__label">
+                        <span class="form__labelText">
+                            Ilość*
+                        </span>
+                        <input class="form__field js-quantity" name="quantity" type="number" min=1 value="10" required>
+                        <span class="form__unit">
+                            szt
+                        </span>
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Rodzaj i grubość laminatu
+                </legend>
+                <ul class="form__list">
+                    <li>
+                        <label class="form__label">
+                            <input type="radio" class="js-radio1" name="laminateType" value="fr4" checked><span
+                                class="form__labelText">FR4 (standardowy)</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="form__label">
+                            <input type="radio" name="laminateType" value="mcpcb"><span class="form__labelText">MCPCB
+                                (aluminium)</span>
+                        </label>
+                    </li>
+                </ul>
+                <p class="form__paragraph">
+                    <label class="form__label">
+                        <span class="form__labelText">Grubość laminatu:</span>
+                        <select name="laminateWeight" class="form__field form__field--broad">
+                            <option class="form__option js-option1" value="1.5" selected>1.5 mm</option>
+                            <option class="form__option" value="2.0">2.0 mm</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <button type="reset" class="form__button">Przywróć dane początkowe</button>
+                </p>
+            </fieldset>
+            <p>
+                <button type="submit" class="form__button form__button--submit">Oblicz wartość zamówienia</button>
+            </p>
+        </form>
+        <p class="resume">Wartość Twojego zamówienia obliczona w oparciu o dane z powyższego formularza to: <span
+                class="resume__finalResult js-finalResult"> N/A</span> PLN netto</p>
+    </div>
+    <footer class="footer">
+        Prosimy o przemyślane zakupy :)
+    </footer>
+</body>
+
+</html>

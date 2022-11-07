@@ -1,0 +1,94 @@
+.form__labelText {
+    max-width: 250px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    color: teal;
+}
+
+.form__field {
+    max-width: 50px;
+    width: 100%;
+    border: 2px solid teal;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.form__fieldset {
+    border: 2px solid teal;
+    border-radius: 20px;
+    padding: 0 auto;
+    box-shadow: 2px 2px 4px teal;
+    background-color: aliceblue;
+    margin: 20px;
+}
+
+.form__legend {
+    background-color: teal;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.form__paragraph {
+    padding: 0px 40px;
+    color: teal;
+}
+
+.form__unit {
+    max-width: 50px;
+    width: 100%;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    color: teal;
+}
+
+.form__label {
+    padding: 5px;
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
+
+.form {
+    margin: 30px 0px;
+}
+
+.form__list {
+    list-style: none;
+}
+
+.form__field--broad {
+    max-width: 100px;
+}
+
+.form__option {
+    padding: 20px;
+}
+
+.form__button--submit {
+    width: 100%;
+}
+
+.form__button--submit:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button--submit:active {
+    background-color: hsl(180, 100%, 35%);
+}
