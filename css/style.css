@@ -13,6 +13,9 @@ html {
     line-height: 1.5;
     max-width: 1000px;
     padding: 0 20px;
+    background-image: url("../images/pcb.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .header {
@@ -26,12 +29,17 @@ html {
 
 .resume {
     color: teal;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
+    background-color: aliceblue;
+    box-shadow: 5px 5px 10px 0px #759AEA;
+    border: 2px solid teal;
+    border-radius: 20px;
+    padding: 0px 20px;
 }
 
 .resume__finalResult {
-    color: hsl(180, 100%, 15%);
+    color: hsl (180, 100%, 15%);
     font-weight: 700;
 }
 

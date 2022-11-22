@@ -5,6 +5,7 @@
     margin-right: 5px;
     padding: 5px;
     color: teal;
+    font-weight: 700;
 }
 
 .form__field {
@@ -33,7 +34,8 @@
 
 .form__paragraph {
     padding: 0px 40px;
-    color: teal;
+    color: white;
+    font-weight: 700;
 }
 
 .form__unit {
@@ -52,9 +54,10 @@
 .form__button {
     background-color: teal;
     color: white;
-    border: none;
+    border: darkgreen 2px solid;
     border-radius: 20px;
     padding: 10px;
+    font-weight: 700;
 }
 
 .form__button:hover {
