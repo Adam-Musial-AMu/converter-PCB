@@ -1,24 +1,41 @@
-console.log("Witam w moim formularzu kalkulacyjnym PCB")
+{
+    const welcome = () => {
+        console.log("Witam w moim formularzu kalkulacyjnym PCB");
+    }
 
-let lengthElement = document.querySelector(".js-length");
-let widthElement = document.querySelector(".js-width");
-let quantityElement = document.querySelector(".js-quantity");
-let formElement = document.querySelector(".js-form");
-let finalResultElement = document.querySelector(".js-finalResult");
-let radio1Element = document.querySelector(".js-radio1");
-let option1Element = document.querySelector(".js-option1");
+    const calculateResult = (length, width, quantity, radio1Element, option1Element) => {
+        return length * width * quantity * (radio1Element.checked ? 0.01 : 0.02) * (option1Element.selected ? 1 : 4);
+    }
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+    const updateResultText = (result) => {
+        const finalResultElement = document.querySelector(".js-finalResult");
+        finalResultElement.innerText = result.toFixed(2);
+    }
 
-    let length = lengthElement.value;
-    let width = widthElement.value;
-    let quantity = quantityElement.value;
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-    result = length * width * quantity * (radio1Element.checked ? 0.01 : 0.02)
+        const option1Element = document.querySelector(".js-option1");
+        const radio1Element = document.querySelector(".js-radio1");
+        const lengthElement = document.querySelector(".js-length");
+        const widthElement = document.querySelector(".js-width");
+        const quantityElement = document.querySelector(".js-quantity");
+        const length = lengthElement.value;
+        const width = widthElement.value;
+        const quantity = quantityElement.value;
 
-    finalResult = result * (option1Element.selected ? 1 : 4)
+        const result = calculateResult(length, width, quantity, radio1Element, option1Element);
 
-    finalResultElement.innerText = finalResult.toFixed(2);
-});
+        updateResultText(result);
+    }
+
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+        formElement.addEventListener("submit", onFormSubmit);
+
+        welcome();
+    }
+    init();
+
+}
 
