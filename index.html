@@ -19,95 +19,102 @@
     <script defer src="js/script.js"></script>
     <title>Converter</title>
     <meta property="og:image" content="images/share.png">
-    <meta property="og:description" content="PCB converter - calculation application. Calculate the value of your order!">
+    <meta property="og:description"
+        content="PCB converter - calculation application. Calculate the value of your order!">
 
 </head>
 
 <body class="body">
-    <h1 class="header">Formularz kalkulacyjny do wyceny <br> elektronicznych obwodów drukowanych PCB</h1>
-    <div class="container">
-        <form class="form js-form">
-            <p class="form__paragraph">
-                Wszystkie pola są wymagane *.
-            </p>
-            <fieldset class="form__fieldset">
-                <legend class="form__legend">
-                    Rozmiar płytki PCB oraz ilość
-                </legend>
+    <header>
+        <h1 class="header">Formularz kalkulacyjny do wyceny <br> elektronicznych obwodów drukowanych PCB</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form class="form js-form">
                 <p class="form__paragraph">
-                    <label class="form__label">
-                        <span class="form__labelText">
-                            Długość PCB*
-                        </span>
-                        <input class="form__field js-length" name="lengthPcb" type="number" min="1" max="300"
-                            value="100" required>
-                        <span class="form__unit">
-                            mm
-                        </span>
-                    </label>
+                    Wszystkie pola są wymagane *.
                 </p>
-                <p class="form__paragraph">
-                    <label class="form__label">
-                        <span class="form__labelText">
-                            Szerokość PCB*
-                        </span>
-                        <input class="form__field js-width" name="widthPcb" type="number" min=1 max="300"
-                            value="50" required>
-                        <span class="form__unit">
-                            mm
-                        </span>
-                    </label>
-                </p>
-                <p class="form__paragraph">
-                    <label class="form__label">
-                        <span class="form__labelText">
-                            Ilość*
-                        </span>
-                        <input class="form__field js-quantity" name="quantity" type="number" min=1 value="10" required>
-                        <span class="form__unit">
-                            szt
-                        </span>
-                    </label>
-                </p>
-            </fieldset>
-            <fieldset class="form__fieldset">
-                <legend class="form__legend">
-                    Rodzaj i grubość laminatu
-                </legend>
-                <ul class="form__list">
-                    <li>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Rozmiar płytki PCB oraz ilość
+                    </legend>
+                    <p class="form__paragraph">
                         <label class="form__label">
-                            <input type="radio" class="js-radio1" name="laminateType" value="fr4" checked><span
-                                class="form__labelText">FR4 (standardowy)</span>
+                            <span class="form__labelText">
+                                Długość PCB*
+                            </span>
+                            <input class="form__field js-length" name="lengthPcb" type="number" min="1" max="300"
+                                value="100" required>
+                            <span class="form__unit">
+                                mm
+                            </span>
                         </label>
-                    </li>
-                    <li>
+                    </p>
+                    <p class="form__paragraph">
                         <label class="form__label">
-                            <input type="radio" name="laminateType" value="mcpcb"><span class="form__labelText">MCPCB
-                                (aluminium)</span>
+                            <span class="form__labelText">
+                                Szerokość PCB*
+                            </span>
+                            <input class="form__field js-width" name="widthPcb" type="number" min=1 max="300" value="50"
+                                required>
+                            <span class="form__unit">
+                                mm
+                            </span>
                         </label>
-                    </li>
-                </ul>
-                <p class="form__paragraph">
-                    <label class="form__label">
-                        <span class="form__labelText">Grubość laminatu:</span>
-                        <select name="laminateWeight" class="form__field form__field--broad">
-                            <option class="form__option js-option1" value="1.5" selected>1.5 mm</option>
-                            <option class="form__option" value="2.0">2.0 mm</option>
-                        </select>
-                    </label>
-                </p>
+                    </p>
+                    <p class="form__paragraph">
+                        <label class="form__label">
+                            <span class="form__labelText">
+                                Ilość*
+                            </span>
+                            <input class="form__field js-quantity" name="quantity" type="number" min=1 value="10"
+                                required>
+                            <span class="form__unit">
+                                szt
+                            </span>
+                        </label>
+                    </p>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Rodzaj i grubość laminatu
+                    </legend>
+                    <ul class="form__list">
+                        <li>
+                            <label class="form__label">
+                                <input type="radio" class="js-radio1" name="laminateType" value="fr4" checked><span
+                                    class="form__labelText">FR4 (standardowy)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="form__label">
+                                <input type="radio" name="laminateType" value="mcpcb"><span
+                                    class="form__labelText">MCPCB
+                                    (aluminium)</span>
+                            </label>
+                        </li>
+                    </ul>
+                    <p class="form__paragraph">
+                        <label class="form__label">
+                            <span class="form__labelText">Grubość laminatu:</span>
+                            <select name="laminateWeight" class="form__field form__field--broad">
+                                <option class="form__option js-option1" value="1.5" selected>1.5 mm</option>
+                                <option class="form__option" value="2.0">2.0 mm</option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <button type="reset" class="form__button">Przywróć dane początkowe</button>
+                    </p>
+                </fieldset>
                 <p>
-                    <button type="reset" class="form__button">Przywróć dane początkowe</button>
+                    <button type="submit" class="form__button form__button--submit">Oblicz wartość zamówienia</button>
                 </p>
-            </fieldset>
-            <p>
-                <button type="submit" class="form__button form__button--submit">Oblicz wartość zamówienia</button>
-            </p>
-        </form>
-        <p class="resume">Wartość Twojego zamówienia obliczona w oparciu o dane z powyższego formularza to: <span
-                class="resume__finalResult js-finalResult"> N/A</span> PLN netto</p>
-    </div>
+            </form>
+            <p class="resume">Wartość Twojego zamówienia obliczona w oparciu o dane z powyższego formularza to: <span
+                    class="resume__finalResult js-finalResult"> N/A</span> PLN netto</p>
+        </div>
+    </main>
     <footer class="footer">
         Prosimy o przemyślane zakupy :)
     </footer>
